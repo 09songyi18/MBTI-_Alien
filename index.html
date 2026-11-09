@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5ef">
+  <meta name="description" content="지구 생활이 가끔 낯선 당신, 안에 어떤 외계인이 살고 있나요? 16개의 질문으로 알아보는 MBTI 성향 테스트.">
+  <title>내 안의 외계인 · 지구인 탐구생활</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='88'%3E👽%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="./" aria-label="내 안의 외계인 홈"><span class="brand-mark">✳</span> 내 안의 외계인<span class="brand-dot">.</span></a>
+    <span class="header-note"><i></i> 지구인 탐구생활</span>
+  </header>
+
+  <main id="main">
+    <section id="start-screen" class="screen start-screen" aria-labelledby="start-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span>PERSONALITY EXPLORER</span><span class="edition">VOL. 01</span></div>
+        <h1 id="start-title" tabindex="-1">분명 지구인인데,<br>가끔 <span class="highlight">외계인</span> 같아.</h1>
+        <p class="hero-description">사람들 사이에서 방전되는 나도,<br>계획 없이 우주로 떠나고 싶은 나도.<br><strong>당신 안의 외계인을 만나보세요.</strong></p>
+        <div class="test-meta"><span>◷ 약 3분</span><span>☷ 16개의 질문</span><span>✦ 16가지 외계인</span></div>
+        <button id="start-button" class="button primary start-button">내 외계인 찾기 <span aria-hidden="true">↗</span></button>
+        <p class="small-note">준비물은 솔직한 마음 하나면 충분해요.</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-grid"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <span class="art-label top-label">UNKNOWN, BUT FAMILIAR.</span><span class="star star-one">✦</span><span class="star star-two">✧</span><span class="star star-three">✳</span>
+        <span class="bubble">여기가… 지구?</span>
+        <div class="alien"><div class="antenna"><i></i></div><div class="alien-head"><div class="eye eye-left"><span></span></div><div class="eye eye-right"><span></span></div><div class="cheek cheek-left"></div><div class="cheek cheek-right"></div><div class="alien-smile"></div></div><div class="alien-body"></div><div class="alien-foot left-foot"></div><div class="alien-foot right-foot"></div></div>
+        <div class="ground-shadow"></div><span class="specimen">SPECIMEN 001 <span>● FRIENDLY</span></span>
+        <span class="floating-tag">지구 적응 중 👋</span>
+      </div>
+      <div class="intro-bottom"><span class="tiny-star">✳</span><div><strong>이상한 게 아니라, 다른 별에서 왔을 뿐.</strong><p>나를 조금 더 이해하는 작고 유쾌한 탐험</p></div><span class="bottom-label">LET’S FIND YOUR PLANET ↗</span></div>
+    </section>
+
+    <section id="quiz-screen" class="screen quiz-screen" aria-labelledby="question-title" hidden>
+      <div class="quiz-top"><span class="eyebrow">지구 생활 관찰 중</span><span id="question-count">01 / 16</span></div>
+      <div id="progress-bar" class="progress-track" role="progressbar" aria-label="테스트 진행률" aria-valuemin="0" aria-valuemax="16" aria-valuenow="0"><div id="progress-fill"></div></div>
+      <div class="question-card"><span id="question-emoji" class="question-emoji" aria-hidden="true"></span><span id="question-category" class="question-category"></span><h1 id="question-title" tabindex="-1"></h1><p class="question-hint">평소의 나와 더 가까운 모습을 골라주세요.</p><div id="answers" class="answers"></div></div>
+      <div class="quiz-bottom"><button id="back-button" class="text-button">← 이전 질문</button><span id="progress-text">0% 탐사 완료</span></div>
+      <p class="quiz-note">정답은 없어요. 가장 나다운 쪽으로!</p>
+    </section>
+
+    <section id="result-screen" class="screen result-screen" aria-labelledby="result-title" hidden>
+      <div class="result-intro"><span class="eyebrow">YOUR INNER ALIEN</span><p>드디어, 내 안의 외계인을 찾았어요!</p></div>
+      <article class="result-card"><div class="result-orbit" aria-hidden="true"></div><span id="result-emoji" class="result-emoji" aria-hidden="true"></span><span id="result-type" class="type-badge"></span><h1 id="result-title" tabindex="-1"></h1><p id="result-tagline" class="result-tagline"></p><div id="result-tags" class="result-tags"></div></article>
+      <div class="guide"><span class="eyebrow">EARTHLING’S MANUAL</span><h2>당신의 지구 생활 안내서</h2><p id="result-description" class="result-description"></p><div class="guide-grid"><div><span>🔭 자주 목격되는 모습</span><p id="result-habit"></p></div><div><span>🔋 나만의 충전 방법</span><p id="result-recharge"></p></div></div><div class="scores"><h3>내 안에서 감지된 신호</h3><div id="score-bars"></div><p id="tie-note" class="tie-note"></p></div></div>
+      <div class="result-actions"><button id="share-button" class="button primary">결과 공유하기 <span aria-hidden="true">↗</span></button><button id="restart-button" class="button secondary">다시 하기 <span aria-hidden="true">↻</span></button></div>
+      <p class="result-footnote">당신은 네 글자보다 훨씬 다채로운 사람이에요.<br>이 결과는 재미로 살펴보는 성향이며, 정식 MBTI 검사가 아니에요.</p>
+      <details id="share-fallback" class="share-fallback" hidden><summary>공유할 내용 직접 복사하기</summary><textarea id="share-text" rows="5" readonly aria-label="공유할 결과 내용"></textarea><p>내용을 길게 누르거나 선택해서 복사해주세요.</p></details>
+    </section>
+  </main>
+  <footer class="footer"><span>© 내 안의 외계인</span><span>재미로 만나는 또 다른 나 · 답변은 전송되지 않아요</span><span class="footer-coordinates">EARTH, SOLAR SYSTEM ✦</span></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="noscript">테스트를 시작하려면 브라우저에서 JavaScript를 켜주세요.</div></noscript>
+</body>
+</html>
